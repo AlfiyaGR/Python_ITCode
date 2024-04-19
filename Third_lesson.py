@@ -111,7 +111,7 @@ print()
 """
 
 print("Задание 8")
-list = [1, 2, 2, 3, 4, 5, 12, 2]\
+list = [1, 2, 2, 3, 4, 5, 12, 2]
 print("Список ", list)
 if len(list) == len(set(list)):
     print("Нет дубликатов")
