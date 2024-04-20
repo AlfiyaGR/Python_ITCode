@@ -100,7 +100,7 @@ print()
 print("Задание 7")
 s = input("Введите строку: ")
 print("Строка: " + s)
-if s[:len(s)/2+1] == s[len(s)/2:]:
+if s[::-1] == s:
     print("Является палиндромом")
 else:
     print("Не является палиндромом")
@@ -126,6 +126,38 @@ print()
 """
 
 print("Задание 9")
+list9 = [12, 13, 14, 134, 12, 14, 12]
+print("Исходный список: ", list9)
+list9.sort()
+for i in range(len(list9) - 1):
+    if list9[i] == list9[i + 1]:
+        list9[i] = ''
+
+for i in range(len(list9)):
+    for i, v in enumerate(list9):
+        if v == '':
+            list9.pop(i)
+
+print(list9)
+
+list9 = [12, 13, 14, 134, 12, 14, 12]
+print("Исходный список: ", list9)
+list9.sort()
+i = 0
+while i < len(list9) - 1:
+    if list9[i] == list9[i + 1]:
+        list9[i] = ''
+    i += 1
+
+i = 0
+while i < len(list9):
+    for ind, v in enumerate(list9):
+        if v == '':
+            list9.pop(ind)
+    i += 1
+
+print(list9)
+
 print()
 
 """
@@ -134,14 +166,6 @@ print()
 
 print("Задание 10")
 n = input("Введите строку: ")
-for i in range(len(n), 0, -1):
+for i in range(len(n) - 1, -1, -1):
     print(n[i])
-print()
-
-"""
-***** Бонусное задание *****
-11) Напечатать календарь месяца, предполагая, что месяц начинается в понедельник и имеет 31 день
-"""
-
-print("Задание 11")
 print()
